@@ -1,0 +1,220 @@
+body{
+    background-image:
+    url("image/smiling-girl.802d7461.png");
+  
+    background-position: 100% 100%;
+    animation: moveBackground 20s infinite;
+    background-size: cover;
+    background-color: #2C5F2D;
+    background-blend-mode: multiply;
+}
+
+@keyframes moveBackground {
+    0%{
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+
+
+.m-auto {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: none;
+    flex-direction: column;
+    padding: 20px;
+   
+    
+}
+
+.m-auto{
+    position: relative;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.logos{
+    position: absolute;
+    top:-12%;
+    left: -70%;
+
+}
+.Welcome-text{
+    position: absolute;
+    animation: disappear-reappear 3s infinite;
+    animation-fill-mode: both;
+    font-weight: 600;
+    font-size: 50px;
+    color:#f7f3f4;
+    top:-2%;
+    right: 20%;
+    letter-spacing: 1px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  @keyframes disappear-reappear {
+    0% {
+      opacity: 1;
+    }
+    50%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+    
+  }
+
+
+
+.p-5{
+    background-color: #ffffffe1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+    width: 400px;
+    border-radius: 10px;
+    background-image: url("image/diagonal-lines.b2359fb5.png");
+    background-position: 100px;
+    background-size: cover;
+    position: absolute;
+    
+}
+
+.btn{
+    background-color: #4CAF50;
+    color:#fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #3e8e41;
+}
+.small{
+    text-decoration: none;
+    color: #666;
+    font-size: 13px;
+
+}
+.small:hover{
+    color: #3e8e41;
+}
+.smallx{
+    text-decoration: none;
+    color: #666;
+    font-size: 13px;
+    float: right;
+}
+
+.smallx:hover{
+    color: #3e8e41;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+.form-label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    
+}
+.h4{
+    color:#3e8e41 ;
+}
+.form-input{
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid #0c8b08;
+    border-radius: 10px;
+    background-color: rgba(102, 185, 211, 0.014);
+}
+.form-input:focus {
+    border-color: #a30505;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+}
+
+
+
+@media only screen and (max-width: 500px) {
+   .Welcome-text{
+    font-size: 20px;
+    margin-left: 20px;
+    top: 45px;
+    
+   }
+.p-5{
+    width:250px ;
+    font-size: 10px;
+    
+} 
+.logos{
+    margin-left: 350px;
+}
+
+}
+
+@media only screen and (max-width: 400px) {
+    .Welcome-text{
+     font-size: 20px;
+     margin-left: 200px;
+     top: 45px;
+     
+    }
+ .p-5{
+     width:250px ;
+     font-size: 10px;
+     
+ }
+ .logos{
+    margin-left: 350px;
+}
+ }
+
+@media only screen and (max-width: 600px) {
+    .Welcome-text{
+     font-size: 20px;
+     margin-left: 350px;
+     top: 80%;
+     left: 305%;
+     
+    }
+ .p-5{
+     width:250px ;
+     font-size: 10px;
+     
+ }
+ .logos{
+    margin-left: 350px;
+}
+ }
+
+ @media only screen and (max-width: 700px) {
+    .Welcome-text{
+     font-size: 20px;
+     margin-left: 20px;
+     top: 45px;
+     left: 10px;
+     
+    }
+ .p-5{
+     width:350px ;
+     font-size: 10px;
+     
+ }
+ .logos{
+    margin-left: 350px;
+}
+ }
+
+ 

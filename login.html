@@ -1,0 +1,75 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="image/EnLite.jpg" 
+    type="image/icon">
+    
+    <link href="{%static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+    <title> SchoolLogin </title>
+</head>
+<body >
+        
+
+            <div class="Welcome-text">
+                <p>WELCOME TO SCHOOL LOGIN PAGE</p>
+
+            </div>
+
+
+    <div class="m-auto" style="max-width: 500px; margin-top: 7rem !important;">
+        
+        <div class="logos">
+            <img src="image/EnLite.jpg" alt="">
+        </div>
+        <div class="p-5 d-none" id="ptlxy">
+            <div class="text-center">
+                <h1 class="h4 font-weight-bold text-gray-900">ADMIN LOGIN PAGE</h1>
+                {%if err_mssg%}
+                <p>{{err_mssg}}</p>
+                {%endif%}
+            </div>
+            <form class="user mt-4" method="POST">
+                {%csrf_token%}
+                <div class="form-group">
+                    <label for="username" class="form-label">Email/School Name</label>
+                    <input type="text" name="school"  class="form-input" id="id_school" 
+                    autocomplete="on" placeholder=" schoolname i.e Royal Academy">
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-input"  id="id_password" placeholder="password">
+                </div>
+                <hr>
+                <button class="btn btn-user btn-block" type="submit" >
+                    Sign In
+                </button>
+            </form>
+            <div class="text-center">
+                <a class="small" href="forgot-password.html">Forgot Password?</a>
+            </div>
+            <div class="text-center">
+                Not Registered ?
+                <a class="smallx" href="{%url 'reg_school'%}">Register School</a>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script src="{%static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script>
+        $(document).ready(()=>{
+            $('input').addClass('form-control form-control-user')
+            $('form').attr('autocomplete', 'off')
+            $('#id_school').attr('placeholder', 'School Name')
+            $('#id_password').attr('placeholder', 'Password').attr('autocomplete', 'new-password')
+            $('#ptlxy').removeClass('d-none')
+        })
+    </script>
+</body>
+</html>
